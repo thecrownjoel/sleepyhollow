@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACGA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,MAAM;EACb,WAAW,EANF,iBAAiB;CAO7B",
+    "sources": [
+        "all.scss",
+        "partials/_header.scss",
+        "partials/_main.scss",
+        "partials/_footer.scss"
+    ],
+    "names": [],
+    "file": "all.css"
+}
