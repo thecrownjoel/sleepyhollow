@@ -17,11 +17,11 @@ function style() {
 
 
 function scripts() {
-    const jsFiles = 'src/js/**/*.js',
-    jsDest = 'dist/js';
-    return gulp.src(jsFiles)
+    const jsSRC = 'src/js/**/*.js',
+    jsDIST = 'dist/js';
+    return gulp.src(jsSRC)
         .pipe(concat('scripts.js'))
-        .pipe(gulp.dest(jsDest));
+        .pipe(gulp.dest(jsDIST));
 }
 
 

@@ -11,6 +11,25 @@
 
 <h1>Hello from homepage.php</h1>
 
+<div class="row end-xs">
+    <div class="col-xs-6">
+        <div class="box">
+          <?php $facebook_wall_posts = get_option('johnson_facebook'); ?>
+          <a href="https://www.facebook.com/BillJohnsonLeads/posts/<?php echo $facebook_wall_posts[0]['id']; ?>" target="_blank">
+          <?php if (!empty($facebook_wall_posts)) {
+            $message = strip_tags($facebook_wall_posts[0]['message']);
+            echo wp_kses_post( wp_trim_words($message, 40) );
+          }
+          ?>
+          </a>
+        </div>
+    </div>
+</div>
+
+
+     
+                  
+
     <?php
 
       $args = array( 'numberposts' => 3, 'order'=> 'ASC', 'orderby' => 'title' );

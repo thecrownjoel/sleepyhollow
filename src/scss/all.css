@@ -1,6 +1,11 @@
+* {
+  font-family: "IM Fell English";
+  font-size: 16px;
+}
+
 body {
-  background-color: black;
-  color: orange;
+  background-color: #fffff9;
+  color: #121211;
   font-family: "IM Fell English";
 }
 /*# sourceMappingURL=all.css.map */
