@@ -11,7 +11,7 @@ function my_assets() {
     wp_register_style('flexboxgrid', get_template_directory_uri() . '/src/css/flexboxgrid.css', array(), false, 'all');
     wp_enqueue_style( 'flexboxgrid');
 
-	wp_register_style('all', get_template_directory_uri() . '/src/scss/all.css', array(), false, 'all');
+	wp_register_style('all', get_template_directory_uri() . '/src/css/all.css', array(), false, 'all');
     wp_enqueue_style( 'all');
 
     wp_enqueue_script('app',get_template_directory_uri() .'/src/js/app.js');

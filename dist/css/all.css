@@ -1,4 +1,8 @@
+* {
+  font-family: "IM Fell English";
+  font-size: 16px; }
+
 body {
-  background-color: black;
-  color: yellow;
+  background-color: pink;
+  color: #121211;
   font-family: "IM Fell English"; }

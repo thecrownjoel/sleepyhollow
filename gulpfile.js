@@ -4,6 +4,7 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       browserSync = require('browser-sync').create();
       concat = require('gulp-concat');
+      autoprefixer = require('gulp-autoprefixer');
 
 
 //compile scss into css
@@ -28,15 +29,20 @@ function scripts() {
 // watcher
 function watch() {
     browserSync.init({
-        server: {
-           baseDir: "./src",
-           index: "/index.html"
-        }
+        // server: {
+        //    baseDir: "./src",
+        //    index: "/index.html"
+        // },
+        proxy: 'http://sleepyhollow.local/',
+        watchOptions: {
+            debounceDelay: 1000 // This introduces a small delay when watching for file change events to avoid triggering too many reloads
+          }
     });
     gulp.watch('src/scss/**/*.scss', style)
     gulp.watch('src/js/**/*.js', scripts)
     gulp.watch('src/*.html').on('change',browserSync.reload);
     gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('**/*.php').on('change',browserSync.reload);
 }
 
 

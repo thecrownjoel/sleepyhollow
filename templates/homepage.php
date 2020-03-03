@@ -9,7 +9,7 @@
 
 <?php get_header(); ?>
 
-<h1>Hello from homepage.php</h1>
+<h1>Hello from homepage.php - still working</h1>
 
 <div class="row end-xs">
     <div class="col-xs-6">
