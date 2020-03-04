@@ -5,6 +5,7 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync').create();
       concat = require('gulp-concat');
       autoprefixer = require('gulp-autoprefixer');
+      imagemin = require('gulp-imagemin');
 
 
 //compile scss into css
@@ -25,6 +26,12 @@ function scripts() {
         .pipe(gulp.dest(jsDIST));
 }
 
+function minimg() {
+    gulp.src('src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+}
+
 
 // watcher
 function watch() {
@@ -40,6 +47,7 @@ function watch() {
     });
     gulp.watch('src/scss/**/*.scss', style)
     gulp.watch('src/js/**/*.js', scripts)
+    gulp.watch('src/img/**/*.*', minimg)
     gulp.watch('src/*.html').on('change',browserSync.reload);
     gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
     gulp.watch('**/*.php').on('change',browserSync.reload);

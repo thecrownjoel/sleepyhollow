@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<h1>INDEX.PHP</h1>
+<h1>INDEX.PHP - this works too</h1>
 
 <?php if ( have_posts() ) : ?>
 
@@ -15,6 +15,7 @@
 	<?php endif; ?>
 
 	<?php
+	
 	// Start the loop.
 	while ( have_posts() ) :
 		the_post();
